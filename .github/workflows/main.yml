@@ -10,7 +10,9 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+      - run: ls
       - run: cd data-test
+      - run: ls
       - run: cargo build --release
       - run: cargo run --release > output.txt
       - run: echo "output.txt" >> .gitignore
