@@ -1,1 +1,19 @@
+name: Build and Run Rust
 
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - run:
+          cargo build --release
+          cargo run --release > output.txt
+          echo "output.txt" >> .gitignore
+          git add output.txt
+          git commit -m "Add output.txt"
+          git push
