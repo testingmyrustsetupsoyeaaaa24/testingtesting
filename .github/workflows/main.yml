@@ -20,4 +20,4 @@ jobs:
           cargo run --release > output.txt
           git add output.txt
           git commit -m "Add output.txt"
-          git push
+          git push origin HEAD
