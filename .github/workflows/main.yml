@@ -10,12 +10,10 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: ls
       - run: |
           cd data-test
           cargo build --release
           cargo run --release > output.txt
-          echo "output.txt" >> .gitignore
           git add output.txt
           git commit -m "Add output.txt"
           git push
