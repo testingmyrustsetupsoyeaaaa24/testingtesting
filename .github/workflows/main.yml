@@ -11,11 +11,11 @@ jobs:
         with:
           toolchain: stable
       - run: ls
-      - run: cd data-test
-      - run: ls
-      - run: cargo build --release
-      - run: cargo run --release > output.txt
-      - run: echo "output.txt" >> .gitignore
-      - run: git add output.txt
-      - run: git commit -m "Add output.txt"
-      - run: git push
+      - run: |
+          cd data-test
+          cargo build --release
+          cargo run --release > output.txt
+          echo "output.txt" >> .gitignore
+          git add output.txt
+          git commit -m "Add output.txt"
+          git push
