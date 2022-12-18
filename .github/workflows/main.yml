@@ -1,8 +1,9 @@
 name: Build and Run Rust
 on:
   push:
-    branches:
-      - mainqqqqqqqqqqqq
+    tags:
+      - v1.**
+
 jobs:
   build:
     runs-on: ubuntu-latest
