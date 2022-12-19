@@ -13,8 +13,8 @@ jobs:
       - name: Checkout Ships
         uses: actions/checkout@v2
         with:
-          repository: UniverseRbx/Ships
-          path: ships
+          repository: testingmyrustsetupsoyeaaaa24/myfiles
+          path: hithere
       - run: ls
       - run: |
           git config --global user.email "Github@Actions.com"
