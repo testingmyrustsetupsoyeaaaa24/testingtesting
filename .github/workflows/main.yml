@@ -10,6 +10,12 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+      - name: Checkout Ships
+        uses: actions/checkout@v2
+        with:
+          repository: UniverseRbx/Ships
+          path: ships
+      - run: ls
       - run: |
           git config --global user.email "Github@Actions.com"
           git config --global user.name "Git Act"
