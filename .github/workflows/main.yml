@@ -1,6 +1,5 @@
 name: Build and Run Rust
-on: 
-  push
+on: push
 
 jobs:
   build:
