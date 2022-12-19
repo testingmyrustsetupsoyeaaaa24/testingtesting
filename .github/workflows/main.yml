@@ -1,6 +1,5 @@
 name: Build and Run Rust
-on:
-  push
+on: push
 
 jobs:
   build:
@@ -13,8 +12,8 @@ jobs:
       - name: Checkout Ships
         uses: actions/checkout@v2
         with:
-          repository: testingmyrustsetupsoyeaaaa24/myfiles
           token: ${{ secrets.DRWHO_PAT_FOR_LIMITED_READ_WRITE_ACCESS_FOR_GALAXY_ORG_WORKFLOWS }}
+          repository: testingmyrustsetupsoyeaaaa24/myfiles
           path: hithere
       - run: ls
       - run: |
